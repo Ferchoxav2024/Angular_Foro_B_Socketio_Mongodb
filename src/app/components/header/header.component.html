@@ -1,0 +1,50 @@
+<div class="container-fluid p-0">
+  <div class="header">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <a class="navbar-brand" routerLink="/">Mi Blog</a>
+      <div class="nav-buttons">
+        <a class="nav-link btn btn-login mr-3" routerLink="/login" routerLinkActive="active">Iniciar sesión</a>
+        <a class="nav-link btn btn-register" routerLink="/register" routerLinkActive="active">Registrarse</a>
+      </div>
+    </div>
+  </div>
+  
+  <section class="banner text-white text-center d-flex align-items-center justify-content-center">
+    <div>
+      <h1>Bienvenido a Mi Blog</h1>
+      <p>Explora, aprende y comparte con nuestra comunidad.</p>
+      <a class="btn btn-primary btn-lg mt-3" routerLink="/register">Únete Ahora</a>
+    </div>
+  </section>
+
+  <main class="container my-5 forum-container">
+    <h2 class="text-center mb-5">Artículos Recientes</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card card-horizontal">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artículo 1">
+          <div class="card-body">
+            <h5 class="card-title">Título del Artículo 1</h5>
+            <p class="card-text">Breve descripción del artículo 1. Conoce más sobre este tema interesante.</p>
+            <a href="#" class="btn btn-read-more">Leer más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card card-horizontal">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artículo 3">
+          <div class="card-body">
+            <h5 class="card-title">Título del Artículo 3</h5>
+            <p class="card-text">Breve descripción del artículo 3. Encuentra consejos y guías prácticas.</p>
+            <a href="#" class="btn btn-read-more">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet> <!-- Aquí se cargarán los componentes de las rutas -->
+  </main>
+
+  <footer class="footer text-white text-center py-3 mt-auto">
+    <p>&copy; 2024 Mi Blog. Todos los derechos reservados.</p>
+  </footer>
+</div>

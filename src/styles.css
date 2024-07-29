@@ -1,0 +1,337 @@
+/* Estilos Globales */
+/* 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+  }
+  
+  .container {
+    max-width: auto;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #007bff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  nav ul li a.active {
+    background-color: #0056b3;
+    border-radius: 8px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  hr {
+    margin: 20px 0;
+  }
+  
+  router-outlet {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li a {
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  */
+  /* Estilo General */
+/* Estilo General */
+/* Estilo General */
+/* Estilo General */
+/* Estilo General */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+}
+/* Contenedor de los botones de navegación */
+.header .nav-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto; /* Para alinear los botones a la derecha */
+  margin-right: 20px; /* Ajusta este valor según sea necesario */
+}
+
+
+/* Estilo de los enlaces de navegación */
+.header .nav-link {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo del botón de inicio de sesión */
+
+
+.header .btn-login {
+  background-color: #3498DB; /* Color de Acento Claro */
+  border: none;
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.header .btn-login:hover {
+  background-color: #2980b9; /* Color más oscuro en hover */
+
+}
+
+/* Estilo del botón de registro */
+.header .btn-register {
+  background-color: #3498DB; /* Color de Acento Claro */
+  border: none;
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.header .btn-register:hover {
+  background-color: #2980b9; /* Color más oscuro en hover */
+}
+.banner {
+  position: relative;
+  background-image: url('./imagenes/pexels-apasaric-325185.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 545px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* Para asegurar que el contenido no se desborde */
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Ajusta el valor para cambiar la opacidad */
+  z-index: 1; /* Coloca el overlay detrás del contenido */
+}
+
+.banner > * {
+  position: relative;
+  z-index: 2; /* Coloca el contenido por encima del overlay */
+}
+
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo de las Tarjetas */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #ffffff; /* Color de fondo de la tarjeta */
+  color: #2C3E50; /* Color del texto de la tarjeta */
+  margin-bottom: 20px; /* Añade margen inferior para separar las tarjetas verticalmente */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de la tarjeta en disposición horizontal */
+.card-horizontal {
+  display: flex;
+  flex-direction: row; /* Alinea los hijos en fila */
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 250px; /* Ajusta este valor según sea necesario */
+  height: 100%; /* Permite que la imagen se ajuste a su contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2C3E50; /* Color del texto del título */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d; /* Color del texto del cuerpo de la tarjeta */
+}
+
+.card-body {
+  padding: 20px; /* Aumenta el padding para mejor presentación */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.btn-primary {
+  background-color: #E74C3C; /* Color de Acento */
+  border: none;
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b; /* Color más oscuro en hover */
+}
+
+
+/* Estilo del Footer */
+/* Estilo del Footer */
+.footer {
+  background-color: #2C3E50; /* Color Principal */
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 1px 0;
+  text-align: center; /* Centrar el texto */
+}
+
+
+/* Estilo del contenedor del foro */
+.forum-container {
+  max-width: 80%;
+  margin: auto;
+}
+.header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Para permitir el posicionamiento del logo */
+}
+
+.header .navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  left: 0; /* Alinear el logo a la izquierda */
+}
+
+.header .nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ECF0F1; /* Color Secundario */
+  color: #2C3E50; /* Texto oscuro para contraste */
+  margin: 0;
+  padding: 0;
+}
+/* Estilo del botón "Leer más" */
+/* Estilo del botón "Leer más" */
+.btn-read-more {
+  padding: 10px 10px; /* Reduce el padding para hacer el botón más pequeño */
+  font-size: 1rem; /* Ajusta el tamaño de la fuente */
+  border-radius: 5px; /* Mantén el borde redondeado */
+  background-color: #E74C3C; /* Color de fondo del botón */
+  color: #ffffff; /* Color del texto */
+  border: none; /* Sin borde */
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Asegura que el botón se ajuste a su contenido */
+  width: 80px; /* Asegura que el botón no tenga un ancho fijo */
+}
+
+.btn-read-more:hover {
+  background-color: #c0392b; /* Color de fondo del botón en hover */
+}

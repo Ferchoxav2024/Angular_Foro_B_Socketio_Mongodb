@@ -1,0 +1,47 @@
+<div class="container-fluid p-0">
+  <div class="header">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <a class="navbar-brand" routerLink="/">Mi Blog</a>
+      <div class="nav-buttons">
+        <a class="nav-link btn btn-login mr-3" routerLink="/login" routerLinkActive="active">Iniciar sesión</a>
+        <a class="nav-link btn btn-register" routerLink="/register" routerLinkActive="active">Registrarse</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="d-flex justify-content-center align-items-center min-vh-100 bg-cover">
+    <div class="form-container">
+      <h2 class="mb-2">Regístrate</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+        <div class="form-group">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" id="username" formControlName="username" class="form-control">
+          <div *ngIf="username?.invalid && (username?.dirty || username?.touched)" class="text-danger">
+            <div *ngIf="username?.errors?.['required']">El nombre de usuario es requerido.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" formControlName="email" class="form-control">
+          <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="text-danger">
+            <div *ngIf="email?.errors?.['required']">El correo electrónico es requerido.</div>
+            <div *ngIf="email?.errors?.['email']">El correo electrónico debe tener un formato válido.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" formControlName="password" class="form-control">
+          <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="text-danger">
+            <div *ngIf="password?.errors?.['required']">La contraseña es requerida.</div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Registrarse</button>
+      </form>
+    </div>
+    
+  </main>
+
+  <footer class="footer text-white text-center py-3 mt-auto">
+    <p>&copy; 2024 Mi Blog. Todos los derechos reservados.</p>
+  </footer>
+</div>

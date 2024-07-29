@@ -1,0 +1,246 @@
+.container_boddy {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+/* Estilo General */
+body {
+  font-family: 'Roboto', sans-serif;
+  
+  background-color: #ECF0F1; /* Color Secundario */
+  color: #2C3E50; /* Texto oscuro para contraste */
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+/* Contenedor del Header */
+.header {
+  background-color: #2C3E50; /* Color Principal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+}
+
+.header .navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-left: 20px; /* Ajusta este valor para mover el logo hacia la izquierda */
+}
+
+.header .nav-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto; /* Para alinear los botones a la derecha */
+}
+
+.header .nav-link {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header .btn-login, .header .btn-register {
+  background-color: #3498DB; /* Color de Acento Claro */
+  border: none;
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.header .btn-login:hover, .header .btn-register:hover {
+  background-color: #2980b9; /* Color más oscuro en hover */
+}
+
+/* Contenedor para centrar el formulario */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+  background-color: #ECF0F1;
+  color: #2C3E50;
+  margin: 0;
+  position: relative; /* Para la capa de opacidad */
+  padding-top: 2vh; /* Espaciado superior */
+  padding-bottom: 10vh; /* Espaciado inferior */
+}
+
+
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Ajusta el ancho máximo del contenedor del formulario */
+  position: relative; /* Para superponerse a la capa de opacidad */
+  z-index: 2;
+}
+
+.forum-container {
+  margin-top: 3rem; /* Ajusta el margen superior según sea necesario */
+  padding: 2rem;
+  background-color: #ffffff; /* Color de fondo para el contenedor de los foros */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.forum-container h2 {
+  text-align: center; /* Centrar horizontalmente */
+  margin-top: 0rem; /* Margen superior */
+  margin-bottom: 1rem; /* Margen inferior */
+  border-bottom: 3px solid #ccc; /* Línea inferior */
+  padding: 10px 0; /* Espaciado interno */
+}
+
+
+.form-group {
+  margin-bottom: 1.5rem; /* Espaciado entre los grupos de formulario */
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #2C3E50; /* Color del texto de las etiquetas */
+  display: block; /* Hace que la etiqueta sea un bloque para que el campo de entrada esté debajo */
+  margin-bottom: 0.5rem; /* Espaciado inferior de la etiqueta */
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%; /* Asegura que el campo ocupe todo el ancho del contenedor */
+  transition: border-color 0.3s ease; /* Transición para el cambio de color del borde */
+}
+
+.form-control:focus {
+  border-color: #3498DB; /* Color del borde al enfocar */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Sombra al enfocar */
+  outline: none; /* Eliminar el borde de enfoque predeterminado */
+}
+
+.btn-primary {
+  background-color: #E74C3C; /* Color de Acento */
+  border: none;
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 1rem; /* Tamaño de fuente del botón */
+}
+
+.btn-primary:hover {
+  background-color: #c0392b; /* Color más oscuro en hover */
+}
+
+/* Estilo del Footer */
+.footer {
+  background-color: #2C3E50; /* Color Principal */
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 10px 0;
+  text-align: center; /* Centrar el texto */
+}
+
+.footer p {
+  margin: 0;
+}
+
+.news-section {
+  margin-top: 2rem;
+}
+
+.news-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2C3E50;
+}
+
+.news-author {
+  color: #6C7A89;
+}
+
+.news-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.news-description {
+  margin-top: 1rem;
+  color: #6C7A89;
+}
+
+.news-link {
+  display: block;
+  margin-top: 1rem;
+  color: #E74C3C;
+  font-weight: bold;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+.forum-container {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  text-align: left; /* Alineación izquierda para etiquetas y campos */
+}
+
+.list-group-item {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f0f0f0; /* Color de fondo para los posts */
+  border-radius: 8px;
+}
+/* Estilo del botón de eliminar */
+.list-group-item button.btn-danger {
+  background-color: #E74C3C; /* Color de fondo */
+  border: none;
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.list-group-item button.btn-danger:hover {
+  background-color: #c0392b; /* Color más oscuro en hover */
+}
+
+
+.list-group-item h5 {
+  color: #2C3E50;
+  margin-bottom: 0.5rem;
+}
+
+.list-group-item p {
+  color: #6C7A89;
+}
+
+.list-group-item button {
+  margin-top: 0.5rem;
+}

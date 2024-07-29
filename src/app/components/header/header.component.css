@@ -1,0 +1,21 @@
+/* Asegurándonos de que los estilos sean específicos y no entren en conflicto */
+
+/* Contenedor del Header */
+.header {
+  background-color: #2C3E50; /* Color Principal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-left: 20px; /* Ajusta este valor para mover el logo hacia la izquierda */
+}
+
+
+
+
+/* Estilo del botón de inicio de sesión */
