@@ -10,8 +10,6 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   loginForm: FormGroup;
-  // Variable para activar el modo texto
-  useTextMode: boolean = false; // Cambia esto a `true` para el modo texto
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
@@ -20,22 +18,7 @@ export class LoginComponent {
     });
   }
 
-  ngOnInit(): void {
-    // Establecer valores predeterminados
-    this.loginForm.patchValue({
-      email: 'admin@example.com',
-      password: 'admin'
-    });
-  }
-
   onLogin(): void {
-    if (this.useTextMode) {
-      // Modo texto: redirige directamente sin validación
-      this.router.navigate(['/forum']);
-      return;
-    }
-
-    // Modo normal: valida y luego redirige
     if (this.loginForm.invalid) {
       return;
     }
