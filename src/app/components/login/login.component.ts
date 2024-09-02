@@ -17,7 +17,13 @@ export class LoginComponent {
       password: ['', Validators.required]
     });
   }
-
+  ngOnInit(): void {
+    // Establecer valores predeterminados
+    this.loginForm.patchValue({
+      email: 'admin@example.com',
+      password: 'admin'
+    });
+  }
   onLogin(): void {
     if (this.loginForm.invalid) {
       return;
