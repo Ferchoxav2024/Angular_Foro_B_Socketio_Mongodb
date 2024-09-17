@@ -1,6 +1,5 @@
-Aquí tienes una versión más llamativa y atractiva para la descripción de tu proyecto en GitHub:
-
----
+- **Autenticación**:
+  - Accede a la aplicación con las credenciales predeterminadas: `admin@example.com` y `admin123`. Estas credenciales permiten a los usuarios ingresar y explorar todas las funcionalidades del blog.
 
 # ForumApp: Tu Blog Dinámico y en Tiempo Real 🚀
 
