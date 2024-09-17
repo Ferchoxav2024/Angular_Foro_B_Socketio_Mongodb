@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
@@ -8,14 +8,22 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  
+  // Credenciales predeterminadas
+  private readonly defaultEmail = 'admin@example.com';
+  private readonly defaultPassword = 'admin123';
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      email: [this.defaultEmail, [Validators.required, Validators.email]],
+      password: [this.defaultPassword, Validators.required]
     });
+  }
+
+  ngOnInit(): void {
+    // Puedes dejar este método vacío si no necesitas hacer nada adicional al iniciar
   }
 
   onLogin(): void {
