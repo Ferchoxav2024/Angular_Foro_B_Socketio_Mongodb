@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-// Eliminar la importación de AuthService
-// import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,10 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, 
-              // Eliminar AuthService de los parámetros del constructor
-              // private authService: AuthService, 
-              private router: Router) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -32,29 +28,18 @@ export class LoginComponent {
       password: this.loginForm.value.password
     };
 
-    // Definir correo y contraseña predefinidos
-    const predefinedEmail = 'admin@example.com';
-    const predefinedPassword = 'admin123';
-
-    // Verificar si el usuario ingresa las credenciales predefinidas
-    if (user.email === predefinedEmail && user.password === predefinedPassword) {
-      // Redirigir al usuario a la interfaz deseada si las credenciales son correctas
-      this.router.navigate(['/forum']);
-    } else {
-      // Manejar el caso de credenciales incorrectas o no predefinidas
-      console.error('Credenciales incorrectas');
-      // Opcional: Mostrar un mensaje de error al usuario
-    }
-
-    // Eliminar el uso de authService
-    // this.authService.login(user).subscribe(
-    //   res => {
-    //     this.router.navigate(['/forum']);
-    //   },
-    //   err => {
-    //     console.error(err);
-    //   }
-    // );
+    // El `AuthService` ya maneja el caso de credenciales predeterminadas
+    this.authService.login(user).subscribe(
+      res => {
+        // Redirigir a la página deseada después de un login exitoso
+        this.router.navigate(['/forum']);
+      },
+      err => {
+        console.error('Error al iniciar sesión', err);
+        // Mostrar un mensaje de error o manejar el error según tu lógica
+        alert('Error: credenciales incorrectas o fallo en el login');
+      }
+    );
   }
 
   get email() {
